@@ -72,8 +72,8 @@ export const AboutSection = () => {
                     Self-Motivated and Proactive
                   </h4>
                   <p className="text-muted-foreground">
-                    "I’m a self-starter who enjoys building side projects and
-                    learning new tools independently."
+                    I’m a self-starter who enjoys building side projects and
+                    learning new tools independently.
                   </p>
                 </div>
               </div>
