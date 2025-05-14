@@ -1,5 +1,5 @@
 import { Code, Ghost, User } from "lucide-react";
-import { SiPython, SiNodedotjs, SiReact } from "react-icons/si";
+import { SiPython, SiNodedotjs, SiReact, SiCodeproject } from "react-icons/si";
 
 export const AboutSection = () => {
   return (
@@ -65,7 +65,7 @@ export const AboutSection = () => {
             <div className="gradient-border p-6 card-hover hover:border-foreground">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <SiNodedotjs className="h-6 w-6 text-primary" />
+                  <SiCodeproject className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">
