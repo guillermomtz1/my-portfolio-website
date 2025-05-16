@@ -31,7 +31,7 @@ export const Skills = () => {
   return (
     <section id="skills" className="py-24 px-4 relative text-center">
       <h2 className="text-3xl md:text-4xl font-bold mb-12">
-        My <span className="text-primary">Skills</span>
+        My <span className="text-primary ">Skills</span>
       </h2>
 
       <div className="flex flex-wrap justify-center gap-8 text-5xl">
