@@ -30,7 +30,7 @@ const technologies = [
 export const Skills = () => {
   return (
     <section id="skills" className="py-24 px-4 relative text-center">
-      <h2 className="text-3xl md:text-4xl font-bold mb-12">
+      <h2 className="text-5xl md:text-4l font-bold mb-12 text-center">
         My <span className="text-primary ">Skills</span>
       </h2>
 
