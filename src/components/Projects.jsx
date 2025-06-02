@@ -3,31 +3,32 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Coming Soon",
-    description: "Stay tuned!",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
+    title: "Movie Rental API",
+    description:
+      "Developed a RESTful Movie API by designing and implementing CRUD operations",
+    image: "/projects/REST-API-project.png",
+    tags: ["Node.js", "Express.js", "MongoDB"],
     demoURL: "#",
     githubUrl: "#",
   },
-  {
-    id: 2,
-    title: "Coming Soon",
-    description: "Stay tuned!",
-    image: "/projects/project2.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoURL: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 3,
-    title: "Coming Soon",
-    description: "Stay tuned!",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "MongoDB"],
-    demoURL: "#",
-    githubUrl: "#",
-  },
+  // {
+  //   id: 2,
+  //   title: "Coming Soon",
+  //   description: "Stay tuned!",
+  //   image: "/projects/project2.png",
+  //   tags: ["React", "Node.js", "Stripe"],
+  //   demoURL: "#",
+  //   githubUrl: "#",
+  // },
+  // {
+  //   id: 3,
+  //   title: "Coming Soon",
+  //   description: "Stay tuned!",
+  //   image: "/projects/project3.png",
+  //   tags: ["React", "Node.js", "MongoDB"],
+  //   demoURL: "#",
+  //   githubUrl: "#",
+  // },
 ];
 
 export const Projects = () => {
@@ -77,7 +78,7 @@ export const Projects = () => {
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
                     <a
-                      href={project.demoUrl}
+                      href={project.demoURL}
                       target="_blank"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
