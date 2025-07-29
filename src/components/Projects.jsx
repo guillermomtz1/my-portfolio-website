@@ -9,7 +9,7 @@ const projects = [
     image: "/projects/REST-API-project.png",
     tags: ["Node.js", "Express.js", "MongoDB"],
     demoURL: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/guillermomtz1/rest-app",
   },
   // {
   //   id: 2,
