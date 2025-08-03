@@ -8,7 +8,7 @@ const projects = [
       "Developed a RESTful Movie API by designing and implementing CRUD operations",
     image: "/projects/REST-API-project.png",
     tags: ["Node.js", "Express.js", "MongoDB"],
-    githubUrl: "https://github.com/guillermomtz1/rest-API",
+    githubUrl: "https://github.com/guillermomtz1/REST-movie-API",
   },
   // {
   //   id: 2,
