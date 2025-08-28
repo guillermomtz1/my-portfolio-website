@@ -8,24 +8,23 @@ const projects = [
       "Developed a RESTful Movie API by designing and implementing CRUD operations",
     image: "/projects/REST-API-project.png",
     tags: ["Node.js", "Express.js", "MongoDB"],
-    githubUrl: "https://github.com/guillermomtz1/REST-movie-API",
+    demoURL: "https://github.com/guillermomtz1/REST-movie-API",
   },
-  // {
-  //   id: 2,
-  //   title: "Coming Soon",
-  //   description: "Stay tuned!",
-  //   image: "/projects/project2.png",
-  //   tags: ["React", "Node.js", "Stripe"],
-  //   demoURL: "#",
-  //   githubUrl: "#",
-  // },
+  {
+    id: 2,
+    title: "BragJournal",
+    description: "Fullstack web app to keep track of career achievements",
+    image: "/projects/Brag-Journal.png",
+    tags: ["MongoDB", "Express.js", "React", "Node.js", "Clerk"],
+    demoURL: "https://notes-app-blue-pi.vercel.app/",
+  },
   // {
   //   id: 3,
   //   title: "Coming Soon",
   //   description: "Stay tuned!",
   //   image: "/projects/project3.png",
   //   tags: ["React", "Node.js", "MongoDB"],
-  //   demoURL: "#",
+  //   demoURL: "",
   //   githubUrl: "#",
   // },
 ];
@@ -82,13 +81,6 @@ export const Projects = () => {
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <ExternalLink size={20} />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
                     </a>
                   </div>
                 </div>
