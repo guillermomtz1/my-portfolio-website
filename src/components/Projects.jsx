@@ -12,7 +12,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "BragJournal",
+    title: "Braggy.dev",
     description: "Fullstack web app to keep track of career achievements",
     image: "/projects/Brag-Journal.png",
     tags: ["MongoDB", "Express.js", "React", "Node.js", "Clerk"],
