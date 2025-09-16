@@ -14,9 +14,9 @@ const projects = [
     id: 2,
     title: "Braggy.dev",
     description: "Fullstack web app to keep track of career achievements",
-    image: "/projects/Brag-Journal.png",
+    image: "/projects/braggy.png",
     tags: ["MongoDB", "Express.js", "React", "Node.js", "Clerk"],
-    demoURL: "https://notes-app-blue-pi.vercel.app/",
+    demoURL: "https://braggy.dev/",
   },
   // {
   //   id: 3,
