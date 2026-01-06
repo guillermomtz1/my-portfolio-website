@@ -1,5 +1,6 @@
 import { BiSolidCheckboxMinus } from "react-icons/bi";
 import { FaGit } from "react-icons/fa";
+import { RiNextjsLine, RiSupabaseLine } from "react-icons/ri";
 import {
   SiPython,
   SiNodedotjs,
@@ -12,6 +13,8 @@ import {
   SiR,
   SiCss3,
   SiJupyter,
+  SiNestjs,
+  SiTypescript,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
@@ -24,16 +27,17 @@ const technologies = [
 
 const frameworks = [
   { name: "Node.js", icon: SiNodedotjs },
+  { name: "Next.js", icon: RiNextjsLine },
   { name: "Express.js", icon: SiExpress },
   { name: "MongoDB", icon: SiMongodb },
+  { name: "Supabase", icon: RiSupabaseLine },
   { name: "Tailwind CSS", icon: SiTailwindcss },
 ];
 
 const languages = [
   { name: "Python", icon: SiPython },
   { name: "Javascript", icon: SiJavascript },
-  { name: "CSS", icon: SiCss3 },
-  { name: "HTML", icon: SiHtml5 },
+  { name: "TypeScript", icon: SiTypescript },
   { name: "R", icon: SiR },
 ];
 
