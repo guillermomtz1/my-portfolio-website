@@ -6,6 +6,7 @@ import { Skills } from "../components/Skills";
 import { Projects } from "../components/Projects";
 import { Contact } from "../components/Contact";
 import { Footer } from "../components/Footer";
+import { Experience } from "../components/Experience";
 
 export const Home = () => {
   return (
@@ -25,8 +26,9 @@ export const Home = () => {
           <AboutSection />
         </div>
 
-        <Skills />
         <Projects />
+        <Experience />
+
         <div>
           <Contact />
         </div>
