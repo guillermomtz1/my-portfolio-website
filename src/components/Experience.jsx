@@ -2,7 +2,7 @@ const experiences = [
   {
     period: "2025 — Present",
     role: "Georgia Institute of Technology",
-    company: "M.S. in Structural Engineering",
+    company: "M.S. in Computer Science",
     description: "Specialization in Machine Learning",
     technologies: [],
     current: true,
