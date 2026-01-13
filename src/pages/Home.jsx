@@ -22,9 +22,6 @@ export const Home = () => {
         <div className="bg-gradient-to-b from-background to-gradient">
           <HeroSection />
         </div>
-        <div>
-          <AboutSection />
-        </div>
 
         <Projects />
         <Experience />

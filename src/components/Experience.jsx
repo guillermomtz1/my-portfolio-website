@@ -86,11 +86,19 @@ export const Experience = () => {
                   <div
                     className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}
                   >
-                    <span className="text-sm text-primary font-medium">
-                      {exp.period}
-                    </span>
-                    <h3 className="text-xl font-semibold mt-2">{exp.role}</h3>
-                    <p className="text-muted-foreground">{exp.company}</p>
+                    <div className="flex justify-between items-start">
+                      <div className="text-left">
+                        <h3 className="text-xl font-semibold text-left">
+                          {exp.role}
+                        </h3>
+                        <p className="text-muted-foreground mt-1 text-left">
+                          {exp.company}
+                        </p>
+                      </div>
+                      <span className="text-sm text-primary font-medium">
+                        {exp.period}
+                      </span>
+                    </div>
                     <p className="text-sm text-muted-foreground mt-4">
                       {exp.description}
                     </p>
