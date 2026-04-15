@@ -11,27 +11,20 @@ import { Experience } from "../components/Experience";
 export const Home = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* Theme Toggle */}
       <ThemeToggle />
-
-      {/* Navbar */}
       <Navbar />
 
-      {/* Main Content */}
       <main>
-        <div className="bg-gradient-to-b from-background to-gradient">
+        <div className="bg-gradient-to-b from-background via-background to-gradient">
           <HeroSection />
         </div>
 
+        <Skills />
         <Projects />
         <Experience />
-
-        <div>
-          <Contact />
-        </div>
+        <Contact />
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

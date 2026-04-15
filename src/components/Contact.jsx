@@ -4,9 +4,7 @@ import {
   Linkedin,
   Mail,
   MapPin,
-  Phone,
   Send,
-  Twitter,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "../hooks/use-toast";
@@ -34,35 +32,48 @@ export const Contact = () => {
             description:
               "Thank you for your message. I'll get back to you soon.",
           });
+          form.current.reset();
         },
         () => {
           toast({
-            title: "Error",
-            description: "Something went wrong. Please try again later.",
+            title: "Something went wrong",
+            description: "Please try again or reach out via email directly.",
           });
         }
       );
   };
 
   return (
-    <section id="contact" className="py-24 px-4 relative bg-secondary/30">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-5xl md:text-4l font-bold mb-12 text-center">
-          Contact <span className="text-primary">Me</span>
-        </h2>
+    <section id="contact" className="py-24 px-4 relative">
+      <div className="absolute inset-0 bg-secondary/20 pointer-events-none" />
+      <div className="absolute top-0 left-1/2 w-96 h-64 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 pointer-events-none" />
 
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Feel free to reach out. I'm always open for new oportunities.
-        </p>
+      <div className="container mx-auto max-w-5xl relative z-10">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">
+            Let&apos;s Talk
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Get In <span className="text-primary">Touch</span>
+          </h2>
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            I&apos;m always open to new opportunities and interesting
+            conversations. Don&apos;t hesitate to reach out.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="bg-card p-8 rounded-lg shadow-xs">
-            <h3 className="text-2xl font-semibold mb-6"> Send a Message </h3>
-            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Contact form */}
+          <div className="bg-card rounded-2xl border border-border p-8 shadow-sm">
+            <h3 className="text-xl font-semibold mb-6 text-left">
+              Send a Message
+            </h3>
+            <form ref={form} onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium mb-2"
+                  className="block text-sm font-medium mb-1.5 text-left"
                 >
                   Your Name
                 </label>
@@ -71,15 +82,15 @@ export const Contact = () => {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                  placeholder="Guillermo Martinez..."
+                  className="w-full px-4 py-2.5 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/50 focus:border-primary transition-colors duration-200"
+                  placeholder="John Doe"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium mb-2"
+                  className="block text-sm font-medium mb-1.5 text-left"
                 >
                   Your Email
                 </label>
@@ -88,98 +99,110 @@ export const Contact = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                  placeholder="youremail@gmail.com"
+                  className="w-full px-4 py-2.5 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/50 focus:border-primary transition-colors duration-200"
+                  placeholder="you@example.com"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium mb-2"
+                  className="block text-sm font-medium mb-1.5 text-left"
                 >
-                  Your Message
+                  Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
+                  rows={4}
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
-                  placeholder="Your Message..."
+                  className="w-full px-4 py-2.5 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/50 focus:border-primary transition-colors duration-200 resize-none"
+                  placeholder="What's on your mind?"
                 />
               </div>
 
               <button
                 type="submit"
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2 hover:bg-primary/50"
+                  "cosmic-button w-full flex items-center justify-center gap-2"
                 )}
               >
-                <Send size={16} />
+                <Send size={15} />
                 Send Message
               </button>
             </form>
           </div>
-          <div className="space-y-8 rounded-lg px-4 py-4">
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
-            <div className="space-y-6 justify-center">
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />
+          {/* Contact info */}
+          <div className="flex flex-col gap-6">
+            <div className="bg-card rounded-2xl border border-border p-6 flex flex-col gap-5">
+              <h3 className="text-xl font-semibold text-left">
+                Contact Information
+              </h3>
+
+              <div className="flex items-center gap-4">
+                <div className="p-2.5 rounded-lg bg-primary/10 shrink-0">
+                  <Mail className="h-5 w-5 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-medium"> Email </h4>
+                <div className="text-left">
+                  <p className="text-xs text-muted-foreground mb-0.5">Email</p>
                   <a
-                    href="mailto:jguillermo.martinez1@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    href="mailto:jguillermotech@gmail.com"
+                    className="text-sm font-medium hover:text-primary transition-colors"
                   >
-                    {" "}
                     jguillermotech@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />
+              <div className="flex items-center gap-4">
+                <div className="p-2.5 rounded-lg bg-primary/10 shrink-0">
+                  <MapPin className="h-5 w-5 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-medium"> Location </h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
-                    {" "}
-                    Texas, USA
-                  </a>
+                <div className="text-left">
+                  <p className="text-xs text-muted-foreground mb-0.5">
+                    Location
+                  </p>
+                  <span className="text-sm font-medium">Texas, USA</span>
                 </div>
               </div>
             </div>
 
-            <div className="pt-8">
-              <h4 className="font-medium mb-4"> Connect With Me</h4>
-              <div className="flex space-x-4 justify-center">
+            {/* Social links */}
+            <div className="bg-card rounded-2xl border border-border p-6">
+              <h3 className="text-base font-semibold mb-4 text-left">
+                Connect With Me
+              </h3>
+              <div className="flex gap-3">
                 <a
                   href="https://www.linkedin.com/in/jose-guillermo-martinez-887400153/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors duration-300"
+                  aria-label="LinkedIn"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 hover:text-primary text-muted-foreground transition-all duration-200 text-sm font-medium"
                 >
-                  <Linkedin />
+                  <Linkedin size={16} />
+                  LinkedIn
                 </a>
                 <a
                   href="https://github.com/guillermomtz1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors duration-300"
+                  aria-label="GitHub"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 hover:text-primary text-muted-foreground transition-all duration-200 text-sm font-medium"
                 >
-                  <Github />
+                  <Github size={16} />
+                  GitHub
                 </a>
                 <a
                   href="https://www.instagram.com/guillermocodes_/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors duration-300"
+                  aria-label="Instagram"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 hover:text-primary text-muted-foreground transition-all duration-200 text-sm font-medium"
                 >
-                  <Instagram />
+                  <Instagram size={16} />
+                  Instagram
                 </a>
               </div>
             </div>
